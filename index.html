@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل الطالب في متابعة المعدل والمستوى الدراسي</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>دليل الطالب في متابعة المعدل والمستوى الدراسي</h1>
+            <h2>طلاب جامعة الرشيد - كلية طب الأسنان</h2>
+        </header>
+
+        <div class="icons">
+            <div class="icon" id="gpa-icon" onclick="showGPAForm()">
+                <span>📊</span>
+                <p>احسب المعدل التراكمي</p>
+            </div>
+            <div class="icon" id="level-icon" onclick="showLevelForm()">
+                <span>🎓</span>
+                <p>معرفة مستوى الطالب</p>
+            </div>
+        </div>
+
+        <!-- Form to calculate GPA -->
+        <div id="gpa-form" class="form" style="display: none;">
+            <h3>احسب المعدل التراكمي للفصول السابقة والفصل الحالي</h3>
+            <input type="number" id="previousGPA" placeholder="المعدل التراكمي للسنين السابقة" />
+            <input type="number" id="previousCredits" placeholder="عدد الساعات المنجزة سابقاً" />
+            <input type="number" id="currentGrade" placeholder="علامة المادة من 100" />
+            <input type="number" id="currentCredits" placeholder="عدد ساعات المادة" />
+            <button onclick="addCourse()">إضافة مادة</button>
+            <button onclick="calculateGPA()">احسب المعدل</button>
+
+            <div id="gpa-result">
+                <p>المعدل التراكمي: <span id="gpa-output"></span></p>
+                <p>التقدير: <span id="grade-output"></span></p>
+                <p>عدد الساعات المنجزة: <span id="credits-output"></span></p>
+            </div>
+        </div>
+
+        <!-- Form to calculate student level -->
+        <div id="level-form" class="form" style="display: none;">
+            <h3>معرفة مستوى الطالب (السنة الدراسية)</h3>
+            <input type="number" id="completedCredits" placeholder="عدد الساعات المنجزة" />
+            <button onclick="calculateLevel()">اظهر النتيجة</button>
+            <p id="level-result"></p>
+            <p id="remaining-credits"></p>
+        </div>
+
+        <footer>
+            <p>هذا التطبيق غير تابع للجامعة ، قام بتنفيذه الطالب سليمان أبو حلاوة</p>
+            <p>بالتوفيق والنجاح</p>
+        </footer>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

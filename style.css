@@ -1,0 +1,120 @@
+/* إضافة خط مميز من Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+body {
+    font-family: 'Cairo', sans-serif; /* استخدام الخط المميز */
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+header h2 {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* تقليل المسافة بين الأيقونات */
+    flex-wrap: wrap;
+}
+
+.icon {
+    background-color: #6a1b9a;
+    border-radius: 50%;
+    padding: 30px;
+    color: white;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+    margin: 10px;
+}
+
+.icon:hover {
+    background-color: #9c4dcc;
+}
+
+.form {
+    display: none;
+    margin-top: 20px;
+    background-color: #444;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+input {
+    width: 100%; /* جعل المدخلات تأخذ العرض الكامل */
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #555;
+    color: white;
+}
+
+button {
+    background-color: #6a1b9a;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #9c4dcc;
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 14px;
+    color: #bbb;
+}
+
+/* تحسين التوافق مع الشاشات الصغيرة (الهواتف) */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 20px;
+    }
+    
+    header h2 {
+        font-size: 16px;
+    }
+    
+    .icons {
+        gap: 10px;
+    }
+
+    .icon {
+        width: 80px;
+        height: 80px;
+        padding: 25px;
+    }
+
+    input, button {
+        width: 90%; /* جعل الأزرار والمدخلات تأخذ معظم العرض */
+    }
+
+    .form {
+        padding: 15px;
+    }
+}
